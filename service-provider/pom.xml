@@ -76,7 +76,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-
             <plugin>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-contract-maven-plugin</artifactId>
@@ -87,6 +86,7 @@
                     <baseClassForTests>com.saggu.cdc.CdcBaseClass</baseClassForTests>
                 </configuration>
             </plugin>
+
 
         </plugins>
     </build>

@@ -10,8 +10,8 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>service-consumer</module>
         <module>service-provider</module>
+        <module>service-consumer</module>
     </modules>
 
 </project>

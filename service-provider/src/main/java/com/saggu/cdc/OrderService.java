@@ -2,16 +2,10 @@ package com.saggu.cdc;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
 
-import static java.util.Objects.isNull;
-import static org.springframework.http.ResponseEntity.notFound;
 import static org.springframework.http.ResponseEntity.ok;
 
 @Service

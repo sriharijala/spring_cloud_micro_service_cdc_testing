@@ -2,6 +2,7 @@ package com.saggu.cdc;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,7 +33,7 @@ public class OrderServiceConsumer {
 
             if (isNull(order)) {
                 return notFound().build();
-            } else if (isNull(order.getId())) {
+            } else if (isNull(order.getOrderId())) {
                 return ResponseEntity.status(UPGRADE_REQUIRED.value()).build();//426
             }
             return ok(order);
@@ -43,8 +44,9 @@ public class OrderServiceConsumer {
 
     @Data
     @AllArgsConstructor
-    static class Order {
-        private String id;
+    @NoArgsConstructor
+    public static class Order {
+        private String orderId;
         private String itemName;
         private double price;
         private int units;

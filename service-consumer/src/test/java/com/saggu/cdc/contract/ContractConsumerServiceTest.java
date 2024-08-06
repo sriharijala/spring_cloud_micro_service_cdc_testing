@@ -23,17 +23,17 @@ import static org.springframework.cloud.contract.stubrunner.spring.StubRunnerPro
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
 @AutoConfigureMockMvc
 @AutoConfigureJsonTesters
-@AutoConfigureStubRunner(
-        stubsMode = LOCAL,
-        ids = "com.saggu:service-provider:+:8090")
-public class ContractConsumerTest {
+//@AutoConfigureStubRunner(
+//        stubsMode = LOCAL,
+//        ids = "com.saggu.cdc:service-provider:+:8090")
+public class ContractConsumerServiceTest {
 
     @Test
     void test() {
         RestTemplate restTemplate = new RestTemplate();
 
         ResponseEntity<OrderServiceConsumer.Order> response = restTemplate.
-                getForEntity("http://localhost:8090/orders/1",
+                getForEntity("http://localhost:8080/orders/1",
                         OrderServiceConsumer.Order.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         System.out.println(response.getBody());

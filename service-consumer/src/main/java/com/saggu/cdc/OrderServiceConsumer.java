@@ -50,5 +50,39 @@ public class OrderServiceConsumer {
         private String itemName;
         private double price;
         private int units;
+        
+                
+		public Order() {
+			super();
+		}
+		
+	
+		public String getOrderId() {
+			return orderId;
+		}
+		public void setOrderId(String orderId) {
+			this.orderId = orderId;
+		}
+		public String getItemName() {
+			return itemName;
+		}
+		public void setItemName(String itemName) {
+			this.itemName = itemName;
+		}
+		public double getPrice() {
+			return price;
+		}
+		public void setPrice(double price) {
+			this.price = price;
+		}
+		public int getUnits() {
+			return units;
+		}
+		public void setUnits(int units) {
+			this.units = units;
+		}
+        
+        
+        
     }
 }

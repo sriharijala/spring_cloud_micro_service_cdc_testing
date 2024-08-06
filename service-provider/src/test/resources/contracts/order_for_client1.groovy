@@ -14,6 +14,7 @@ Contract.make {
     response {
         status OK()
         headers {
+			
             contentType applicationJson()
         }
         body(
